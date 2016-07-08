@@ -5,4 +5,4 @@ if [ "$(whoami)" != "root" ] ; then
   exit 1
 fi
 echo "Hello , This is the Menu. Select which one you want to do"
-echo '1. Change Hostname \n  2. Set Static IP \n  3. Install SSH Server'
+echo -e '1. Change Hostname \n  2. Set Static IP \n  3. Install SSH Server'
