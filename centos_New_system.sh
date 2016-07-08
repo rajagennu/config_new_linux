@@ -5,8 +5,21 @@ if [ "$(whoami)" != "root" ] ; then
   exit 1
 fi
 echo "Hello , This is the Menu. Select which one you want to do"
-<<<<<<< HEAD
-echo '1. Change Hostname \n  2. Set Static IP \n  3. Install SSH Server'
-=======
-echo -e '1. Change Hostname \n  2. Set Static IP \n  3. Install SSH Server'
->>>>>>> ebd6d347a2a4a2975d61564568f458d93c15a101
+echo -e '\t1. Change Hostname \n \t2. Set Static IP \n \t3. Install SSH Server\n \t4. Above All'
+read sel_val
+
+case $sel_val in 
+ 1) 
+   echo "You have selected changing hostname" ;;
+ 2)
+   echo "You have selected setting static IP" ;;
+3)
+  echo "You have selected installing ssh service" ;;
+4)
+ echo "You have selected full menu" ;;
+
+*)
+ echo "Wrong selection , please try again" ;;
+esac
+
+echo "Thank you"
